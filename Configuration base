@@ -1,0 +1,10 @@
+sudo raspi-config
+
+
+#Wifi
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+network={
+    ssid="testing"
+    psk="testingPassword"
+}

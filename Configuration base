@@ -2,9 +2,13 @@ sudo raspi-config
 
 
 #Wifi
-sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+Create a file in the root of boot called: wpa_supplicant.conf (instructions below). Then paste the following into it (adjusting for your ISO 3166 alpha-2 country code, network name and network password):
+
+country=FR
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
 
 network={
-    ssid="testing"
-    psk="testingPassword"
+    ssid="NETWORK-NAME"
+    psk="NETWORK-PASSWORD"
 }
